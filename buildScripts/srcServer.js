@@ -20,6 +20,14 @@ app.get('/', function (req, res) {
 })
 
 
+app.get('/users', function (req, res) {
+  res.json([
+    {"id": 1, "firstName": "Man1", "lastName": "Raj1", "email": "email1@gmail.com"},
+    {"id": 2, "firstName": "Man2", "lastName": "Raj2", "email": "email2@gmail.com"},
+    {"id": 3, "firstName": "Man3", "lastName": "Raj3", "email": "email3@gmail.com"}
+  ]);
+});
+
 app.listen(port, function (err) {
   if (err) {
     console.log(err)
